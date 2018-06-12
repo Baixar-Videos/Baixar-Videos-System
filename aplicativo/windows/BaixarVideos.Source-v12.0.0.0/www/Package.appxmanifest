@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  IgnorableNamespaces="uap mp">
+    		<Identity Name="35467PlanetsWEB.BaixarVdeos" Publisher="CN=6A927B0E-298B-4283-8751-2D7010072733" Version="12.0.0.0" />
+	    <mp:PhoneIdentity PhoneProductId="c29a4491-46c9-4111-991d-5e3270c26718" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+    <Properties>
+        <DisplayName>Baixar Vídeos</DisplayName>
+        <PublisherDisplayName>PlanetsWEB</PublisherDisplayName>
+        <Logo>images\StoreLogo.png</Logo>
+    </Properties>
+    <Dependencies>
+        <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+    </Dependencies>
+    <Resources>
+        <Resource Language="x-generate"/>
+    </Resources>
+    <Applications>
+        <Application Id="App" StartPage="http://www.baixar-videos.net/aplicativo/windows/iframe/">
+            <uap:VisualElements DisplayName="Baixar Vídeos"
+              Description="Versão instável do nosso aplicativo acesse nosso site e saiba mais www.baixar-videos.net"
+              BackgroundColor="#ffffff"
+              Square150x150Logo="images\Square150x150Logo.png"
+              Square44x44Logo="images\Square44x44Logo.png">
+                <uap:SplashScreen Image="images\SplashScreen.png" BackgroundColor="#ffffff" />
+                <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" Square310x310Logo="images\Square310x310Logo.png">
+                    <uap:ShowNameOnTiles>
+                        <uap:ShowOn Tile="wide310x150Logo"/>
+						<uap:ShowOn Tile="square310x310Logo" />
+                    </uap:ShowNameOnTiles>
+                </uap:DefaultTile>
+                <uap:InitialRotationPreference>
+                    <uap:Rotation Preference="portrait"/>
+                </uap:InitialRotationPreference>
+            </uap:VisualElements>
+            <uap:ApplicationContentUriRules>
+                <uap:Rule Type="include" Match="http://www.baixar-videos.net/aplicativo/windows/iframe/" WindowsRuntimeAccess="all"/>
+            </uap:ApplicationContentUriRules>
+        </Application>
+    </Applications>
+    <Capabilities>
+        <Capability Name="internetClient" />
+
+
+    </Capabilities>
+</Package>

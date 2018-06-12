@@ -1,0 +1,42 @@
+Options -Indexes
+Options +FollowSymLinks
+
+<IfModule mod_rewrite.c>
+
+RewriteEngine on
+
+## Redirecionar em caso de erros ##
+ErrorDocument 400 https://www.planetsweb.com.br/erro/400
+ErrorDocument 403 https://www.planetsweb.com.br/erro/403
+ErrorDocument 404 https://www.planetsweb.com.br/erro/404
+ErrorDocument 500 https://www.planetsweb.com.br/erro/500
+ErrorDocument 501 https://www.planetsweb.com.br/erro/501
+ErrorDocument 502 https://www.planetsweb.com.br/erro/502
+ErrorDocument 503 https://www.planetsweb.com.br/erro/503
+ErrorDocument 504 https://www.planetsweb.com.br/erro/504
+ErrorDocument 505 https://www.planetsweb.com.br/erro/505
+
+RewriteEngine On 
+RewriteCond %{HTTP:CF-Visitor} '"scheme":"http"'
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L]
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule .* https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteRule ^baixar/android$ /home/plane132/public_html/SitesHospedados/baixar-videos.net/site/baixar/android.php
+RewriteRule ^baixar$ /home/plane132/public_html/SitesHospedados/baixar-videos.net/site/baixar/index.php
+RewriteRule ^navegador$ /home/plane132/public_html/SitesHospedados/baixar-videos.net/site/navegador/index.php
+RewriteRule ^home$ /home/plane132/public_html/SitesHospedados/baixar-videos.net/site/index.php
+RewriteRule ^index$ /home/plane132/public_html/SitesHospedados/baixar-videos.net/site/index.php
+RewriteRule ^$ /home/plane132/public_html/SitesHospedados/baixar-videos.net/site/index.php
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /home/plane132/public_html/SitesHospedados/baixar-videos.net/site/$1 [L,QSA]
+
+</IfModule>
+
+<files ~ "^.*\.([Hh][Tt][Aa])">
+order allow,deny
+deny from all
+satisfy all
+</files>

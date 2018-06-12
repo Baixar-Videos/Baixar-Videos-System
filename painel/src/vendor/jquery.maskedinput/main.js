@@ -1,0 +1,16 @@
+$("[data-mask='data']").mask("99/99/9999"); 
+$("[data-mask='hora']").mask("99:99");
+$("[data-mask='rg']").mask("9.999.999");
+$("[data-mask='cep']").mask("99999-999");
+$("[data-mask='cpf']").mask("999.999.999-99");
+$("[data-mask='telefone']").mask("(99) 9999-9999");
+$("[data-mask='celular']").mask("(99) 9 9999-9999");
+$("[data-mask='phone-ext']").mask("(999) 999-9999? x99999");
+$("[data-mask='phone-int']").mask("+33 999 999 999");
+$("[data-mask='taxid']").mask("99-9999999");
+$("[data-mask='ssn']").mask("999-99-9999");
+$("[data-mask='product-key']").mask("a*-999-a999");
+$("[data-mask='porcentagem']").mask("99%");
+$("[data-mask='dinheiro_preco']").mask("999.99");
+$("[data-mask='dinheiro_mil']").mask("9,999.99");
+$("[data-mask='dinheiro']").mask("R$ 999,999,999.99");

@@ -1,0 +1,16 @@
+Options -Indexes
+Options +FollowSymLinks
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+#RewriteBase /flyspray
+
+	RewriteRule ^login$ index.html
+	RewriteRule ^sair$ processar/Sair.php
+	
+	RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^(.*)$ home.php?url=$1 [L,QSA]
+	
+</IfModule>
+

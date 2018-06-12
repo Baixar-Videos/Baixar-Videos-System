@@ -1,0 +1,10 @@
+Options -Indexes
+Options +FollowSymLinks
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+	RewriteCond %{HTTP_HOST} ^baixar-videos.net [NC]
+	RewriteRule ^(.*)$ http://www.baixar-videos.net$1 [L,R=301,NC]
+
+</IfModule>
